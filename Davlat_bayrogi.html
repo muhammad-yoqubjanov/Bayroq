@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#06121f"><title>Davlat bayrog‘i – 35 yil</title>
+<style>
+:root{--bg:#f4f9fb;--surf:#fff;--ink:#12252d;--mut:#4f646c;--line:#d0e1e6;--acc:#00697e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0b1a21;--surf:#12262f;--ink:#e8f2f5;--mut:#9bb3bb;--line:#264049;--acc:#5fd3ea}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0b1a21;--surf:#12262f;--ink:#e8f2f5;--mut:#9bb3bb;--line:#264049;--acc:#5fd3ea}
+html{background:#06121f;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+button:focus-visible{outline:3px solid #00c8f0;outline-offset:2px}
+.hero{position:relative;min-height:100svh;background:radial-gradient(130% 70% at 50% 0,#0e4560,#06121f 68%);color:#fff;text-align:center;padding:24px 12px 32px;touch-action:pan-y;user-select:none;-webkit-user-select:none;display:flex;flex-direction:column;align-items:center;overflow:hidden}
+#sky{position:absolute;left:0;top:0;width:100%;height:100%}
+.hero>*:not(#sky){position:relative}
+.hero h1{font:400 clamp(1.1rem,4vw,1.7rem)/1.3 Georgia,serif;margin:0;letter-spacing:.03em;opacity:0;transition:opacity 1.2s}
+.big{font:700 clamp(6.5rem,40vw,12rem)/.95 Georgia,serif;background:linear-gradient(100deg,#00c8f0,#fff 42%,#fff 58%,#2fe052);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 26px rgba(0,200,240,.45));opacity:0;transform:scale(.55);transition:opacity 1s,transform 1.1s cubic-bezier(.2,1.5,.4,1)}
+.sub{font:400 1.2rem Georgia,serif;opacity:0;transition:opacity 1.4s .5s;margin-bottom:6px}
+.show h1,.show .big,.show .sub{opacity:1;transform:none}
+#flag{display:block;touch-action:pan-y}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:6px 0 12px;max-width:640px}
+.chip{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;padding:10px 16px;min-height:44px;border-radius:999px;transition:background .2s}
+.chip[aria-pressed=true]{background:#0099b5;border-color:#0099b5}
+.go{background:#1eb53a;border-color:#1eb53a;font-weight:600}
+#info{min-height:4.6em;max-width:520px;font-size:1.02rem;color:#e6f3f7}
+#info b{font:700 1.2rem Georgia,serif;display:block}
+.hint{font-size:.82rem;opacity:.65;margin-top:10px}
+#fw{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:50}
+.sec{max-width:760px;margin:0 auto;padding:50px 18px 0}
+h2{font:700 1.7rem/1.2 Georgia,serif;margin:0 0 6px}
+.lead{color:var(--mut);margin:0 0 18px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.clock{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.clock div{background:var(--surf);border:1px solid var(--line);border-top:5px solid #0099b5;border-radius:8px;padding:12px 8px;text-align:center}
+.clock div:nth-child(2){border-top-color:#1eb53a}
+.clock div:nth-child(3){border-top-color:#ce1126}
+.clock strong{display:block;font:700 clamp(1.05rem,4.6vw,1.8rem) Georgia,serif;color:var(--acc);font-variant-numeric:tabular-nums;word-break:break-all}
+.clock span{color:var(--mut);font-size:.82rem}
+.tl{list-style:none;margin:0;padding:0 0 0 24px;border-left:4px solid;border-image:linear-gradient(#0099b5 33%,#ce1126 33% 36%,#fff 36% 64%,#ce1126 64% 67%,#1eb53a 67%) 1}
+.tl li{position:relative;margin:0 0 22px;padding-left:10px}
+.tl li::before{content:"";position:absolute;left:-36px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid #0099b5}
+.tl li.key::before{background:#1eb53a;border-color:#1eb53a;width:20px;height:20px;left-39px;left:-39px;top:2px;box-shadow:0 0 0 6px rgba(30,181,58,.25)}
+.tl time{font-weight:700;color:var(--acc)}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:18px}
+.fact{display:flex;gap:14px;align-items:center;justify-content:space-between}
+.btn{border:0;background:#0099b5;color:#fff;padding:11px 18px;min-height:44px;border-radius:8px}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-bottom:14px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#0099b5,#1eb53a);transition:width .4s}
+.opts{display:grid;gap:8px;margin:14px 0}
+.opt{text-align:left;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:13px 14px;min-height:48px;border-radius:8px}
+.opt.ok{background:#1eb53a;border-color:#1eb53a;color:#fff}
+.opt.bad{background:#ce1126;border-color:#ce1126;color:#fff}
+footer{margin-top:56px;background:#06121f;color:#9bb3bb;text-align:center;padding:22px 14px;font-size:.85rem}
+@media (max-width:520px){.sec{padding:38px 14px 0}h2{font-size:1.45rem}.chips{gap:6px}.chip{padding:9px 13px;font-size:.92rem}.clock{grid-template-columns:1fr}.clock div{display:flex;justify-content:space-between;align-items:baseline;text-align:left;padding:12px 16px}.clock strong{font-size:1.45rem;word-break:normal}.fact{flex-direction:column;align-items:stretch}.tl{padding-left:20px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero" id="hero">
+<canvas id="sky"></canvas>
+<h1>Davlat bayrog‘i qabul qilinganiga</h1>
+<div class="big" id="n">0</div>
+<div class="sub">yil o‘tdi</div>
+<canvas id="flag" aria-label="Hilpirayotgan O‘zbekiston Davlat bayrog‘i"></canvas>
+<div class="chips" id="chips"></div>
+<div id="info" aria-live="polite"><b>Bayroqni bosing!</b>Salyut uchun bayroqni yoki osmonni bosing, shamol uchun sichqonchani yuriting. Ovoz eshitilishi uchun ekranni bir marta bosing.</div>
+<div class="chips"><button class="chip go" id="bSal">Salyut!</button><button class="chip go" id="bWind">Shamol</button><button class="chip" id="bSnd" aria-pressed="true">Ovoz: yoqilgan</button></div>
+</header>
+<canvas id="fw"></canvas>
+
+<section class="sec rv">
+<h2>Mustaqil yurt, jonli hisoblagich</h2>
+<p class="lead" id="ban"></p>
+<div class="clock"><div><strong id="kd">0</strong><span>kun</span></div><div><strong id="ks">0</strong><span>soat</span></div><div><strong id="kc">0</strong><span>soniya</span></div></div>
+</section>
+
+<section class="sec rv">
+<h2>Sanalar xronikasi</h2>
+<p class="lead">Mustaqillikning dastlabki muhim qadamlari.</p>
+<ul class="tl">
+<li><time>1991-yil, 31-avgust</time><br>O‘zbekiston mustaqilligi e’lon qilindi.</li>
+<li class="key"><time>1991-yil, 18-noyabr</time><br>Davlat bayrog‘i qabul qilindi. Bu mustaqillikdan 79 kun keyin bo‘ldi.</li>
+<li><time>1992-yil, 2-iyul</time><br>Davlat gerbi qabul qilindi.</li>
+<li><time>1992-yil, 8-dekabr</time><br>Konstitutsiya qabul qilindi.</li>
+<li><time>1992-yil, 10-dekabr</time><br>Davlat madhiyasi qabul qilindi.</li>
+</ul>
+</section>
+
+<section class="sec rv">
+<h2>Bilasizmi?</h2>
+<div class="card fact"><span id="fact"></span><button class="btn" id="nf">Yana</button></div>
+</section>
+
+<section class="sec rv">
+<h2>Bilimingizni sinang</h2>
+<p class="lead">5 ta savol. To‘g‘ri javobga salyut bor!</p>
+<div class="card" id="quiz"></div>
+</section>
+<footer>18-noyabr, Davlat bayrog‘i kuni. Bayramingiz muborak bo‘lsin!</footer>
+
+<script>
+var $=function(s){return document.querySelector(s)},RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var hero=$("#hero"),fc=$("#flag"),fx=fc.getContext("2d"),sk=$("#sky"),sx=sk.getContext("2d"),fw=$("#fw"),wx=fw.getContext("2d");
+var MOB=matchMedia("(pointer:coarse)").matches||innerWidth<700,dpr=Math.min(devicePixelRatio||1,MOB?1.5:2),FW,FH,CH,stars=[],wind=0,sel=null;
+function mkStars(){stars=[];for(var i=0;i<(MOB?70:110);i++)stars.push({x:Math.random(),y:Math.random(),r:Math.random()*1.4+.3,p:Math.random()*6})}
+function size(){FW=Math.min(innerWidth*.92,640);FH=FW/2;CH=FH*1.85;
+fc.style.width=FW+"px";fc.style.height=CH+"px";fc.width=FW*dpr;fc.height=CH*dpr;
+sk.width=hero.clientWidth*dpr;sk.height=hero.clientHeight*dpr;fw.width=innerWidth*dpr;fw.height=innerHeight*dpr}
+mkStars();size();var lw=innerWidth;addEventListener("resize",function(){if(innerWidth!=lw){lw=innerWidth;size()}else{fw.width=innerWidth*dpr;fw.height=innerHeight*dpr}});
+/* bayroq teksturasi */
+var tex=document.createElement("canvas");tex.width=800;tex.height=400;var tx=tex.getContext("2d");
+function al(k){return sel==null||sel==k?1:.28}
+function star(cx,cy,r){tx.beginPath();for(var i=0;i<10;i++){var a=-Math.PI/2+i*Math.PI/5,q=i%2?r*.4:r;tx[i?"lineTo":"moveTo"](cx+q*Math.cos(a),cy+q*Math.sin(a))}tx.closePath();tx.fill()}
+function drawTex(){
+tx.globalAlpha=1;tx.fillStyle="#06121f";tx.fillRect(0,0,800,400);
+tx.globalAlpha=sel==null||sel=="blue"?1:(sel=="moon"||sel=="stars"?.55:.28);tx.fillStyle="#0099b5";tx.fillRect(0,0,800,128);
+tx.globalAlpha=al("red");tx.fillStyle="#ce1126";tx.fillRect(0,128,800,8);tx.fillRect(0,264,800,8);
+tx.globalAlpha=al("white");tx.fillStyle="#fff";tx.fillRect(0,136,800,128);
+tx.globalAlpha=al("green");tx.fillStyle="#1eb53a";tx.fillRect(0,272,800,128);
+tx.globalAlpha=al("moon");tx.fillStyle="#fff";tx.save();tx.beginPath();tx.arc(112,64,48,0,7);tx.clip();
+tx.beginPath();tx.rect(0,0,800,400);tx.moveTo(170,64);tx.arc(130,64,40,0,7);tx.fill("evenodd");tx.restore();
+tx.globalAlpha=al("stars");tx.fillStyle="#fff";
+[[3,2,25.6],[4,1,64],[5,0,102.4]].forEach(function(r){for(var i=0;i<r[0];i++)star(161.6+(r[1]+i)*32,r[2],9.6)});
+tx.globalAlpha=1}
+drawTex();
+/* chiplar */
+var info={blue:["Moviy rang","Moviy osmon va tiniq suvning ramzi. U Amir Temur bayrog‘i rangi bilan ham bog‘liq."],white:["Oq rang","Tinchlik va poklik ramzi, ezgu niyatlar rangi."],green:["Yashil rang","Tabiat va yangi hayotning ramzi."],red:["Qizil chiziqlar","Hayotiy quvvat ramzi. Ranglarni ajratib turuvchi ikki nozik chiziq."],moon:["Yarim oy","Yangi mustaqil davlatning tug‘ilishini bildiradi."],stars:["12 ta yulduz","Yilning 12 oyiga ishora qiladi. Ular uch qatorda: tepada 3 ta, o‘rtada 4 ta, pastda 5 ta. Qatorlar bayroq erkin chetiga qarab tekislangan."]};
+var chips=$("#chips");
+if(MOB)$("#info").innerHTML="<b>Bayroqni bosing!</b>Salyut uchun ekranga tegining, shamol uchun bayroq ustida barmog‘ingizni suring. Ovoz uchun ekranga bir marta tegining.";
+function pick(k){sel=sel==k?null:k;drawTex();wind=Math.max(wind,1.2);
+chips.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.k==sel)});
+$("#info").innerHTML=sel?"<b>"+info[sel][0]+"</b>"+info[sel][1]:"<b>Bayroqni bosing!</b>Qismlardan birini tanlang.";}
+Object.keys(info).forEach(function(k){var b=document.createElement("button");b.className="chip";b.textContent=info[k][0];b.dataset.k=k;b.setAttribute("aria-pressed","false");b.onclick=function(){pick(k)};chips.appendChild(b)});
+/* ovoz (Web Audio, tashqi fayllarsiz) */
+var AC=null,NB=null,snd=true,armed=false,lastG=0;
+function ac(){if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)();var l=AC.sampleRate*2,b=AC.createBuffer(1,l,AC.sampleRate),d=b.getChannelData(0);for(var i=0;i<l;i++)d[i]=Math.random()*2-1;NB=b}catch(e){}}if(AC&&AC.state=="suspended")AC.resume();return AC}
+function arm(){armed=true;ac()}
+addEventListener("pointerdown",arm,true);addEventListener("click",arm,true);addEventListener("keydown",arm,true);
+function noise(type,f0,f1,dur,vol,q,delay){if(!armed||!snd)return;var c=ac();if(!c)return;var t=c.currentTime+(delay||0),s=c.createBufferSource();s.buffer=NB;var f=c.createBiquadFilter();f.type=type;f.Q.value=q||1;f.frequency.setValueAtTime(f0,t);f.frequency.exponentialRampToValueAtTime(f1,t+dur);var g=c.createGain();g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(vol,t+dur*.25);g.gain.exponentialRampToValueAtTime(.0001,t+dur);s.connect(f);f.connect(g);g.connect(c.destination);s.start(t);s.stop(t+dur+.05)}
+function thump(){if(!armed||!snd)return;var c=ac();if(!c)return;var t=c.currentTime,o=c.createOscillator(),g=c.createGain();o.frequency.setValueAtTime(150,t);o.frequency.exponentialRampToValueAtTime(40,t+.35);g.gain.setValueAtTime(.55,t);g.gain.exponentialRampToValueAtTime(.0001,t+.4);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+.45)}
+function whoosh(){noise("bandpass",500,3000,.65,.14,3)}
+function boom(){thump();noise("lowpass",1200,70,.9,.45,.7);for(var i=0;i<7;i++){var f=3000+Math.random()*3500;noise("highpass",f,f,.07,.07,1,.1+Math.random()*.6)}}
+function gust(big){noise("bandpass",250,big?950:700,big?2.4:1.3,big?.42:.16,.6);if(big)noise("highpass",1200,2600,2.2,.05,1,.15)}
+/* salyut */
+var P=[],R=[],COL=["#00c8f0","#ffffff","#2fe052","#ff3b52","#ffffff"];
+function burst(x,y,c){boom();var n=RM?18:(MOB?40:64),c1=c||COL[Math.random()*5|0];for(var i=0;i<n;i++){var a=6.283*i/n+Math.random()*.2,v=2+Math.random()*4.2;P.push({x:x,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,l:1,c:Math.random()<.7?c1:COL[Math.random()*5|0]})}}
+function rocket(x,ty){whoosh();R.push({x:x,y:innerHeight,ty:ty,c:COL[Math.random()*5|0]})}
+function salvo(n){for(var i=0;i<n;i++)setTimeout(function(){rocket(innerWidth*(.1+Math.random()*.8),innerHeight*(.12+Math.random()*.4))},i*380)}
+function drawFx(){wx.setTransform(dpr,0,0,dpr,0,0);wx.clearRect(0,0,innerWidth,innerHeight);
+if(!P.length&&!R.length)return;wx.shadowColor="rgba(0,0,0,.4)";wx.shadowBlur=MOB?2:4;wx.lineWidth=2.2;
+R=R.filter(function(r){r.y-=9;wx.globalAlpha=1;wx.strokeStyle=r.c;wx.beginPath();wx.moveTo(r.x,r.y);wx.lineTo(r.x,r.y+16);wx.stroke();if(r.y<=r.ty){burst(r.x,r.y,r.c);return false}return true});
+P=P.filter(function(p){var ox=p.x,oy=p.y;p.vx*=.985;p.vy=p.vy*.985+.07;p.x+=p.vx;p.y+=p.vy;p.l-=.014;if(p.l<=0)return false;wx.globalAlpha=p.l;wx.strokeStyle=p.c;wx.beginPath();wx.moveTo(ox,oy);wx.lineTo(p.x,p.y);wx.stroke();return true});
+wx.globalAlpha=1;wx.shadowBlur=0}
+/* osmon va bayroq */
+function drawSky(t){sx.setTransform(dpr,0,0,dpr,0,0);sx.clearRect(0,0,hero.clientWidth,hero.clientHeight);sx.fillStyle="#fff";
+stars.forEach(function(s){sx.globalAlpha=.3+.7*Math.abs(Math.sin(t*.8+s.p));sx.beginPath();sx.arc(s.x*hero.clientWidth,s.y*hero.clientHeight,s.r,0,7);sx.fill()});sx.globalAlpha=1}
+var T0=0;
+function drawFlag(t){
+if(!T0)T0=t;var rise=RM?1:Math.min(1,Math.max(0,(t-T0-.5)/3)),e=1-Math.pow(1-rise,3);
+fx.setTransform(dpr,0,0,dpr,0,0);fx.clearRect(0,0,FW,CH);
+var top=18,fy=top+(1-e)*(CH-top-FH-10),x0=12,w=FW-x0,n=Math.ceil(w/4),cw=w/n;
+var g=fx.createLinearGradient(2,0,10,0);g.addColorStop(0,"#8a6a1c");g.addColorStop(.5,"#ffe08a");g.addColorStop(1,"#8a6a1c");
+fx.fillStyle=g;fx.fillRect(2,12,8,CH-12);fx.beginPath();fx.arc(6,10,7.5,0,7);fx.fill();
+wind=Math.min(wind*.985,3);var A=(RM?.15:1)*(1+wind*1.7);
+for(var i=0;i<n;i++){var u=i/n,ph=u*6.4-t*3.3,dy=Math.sin(ph)*FH*.04*(.1+u)*A+Math.sin(u*12-t*5.2)*FH*.008*u*A,sh=Math.cos(ph)*u,X=x0+i*cw;
+fx.drawImage(tex,u*800,0,800/n+1,400,X,fy+dy,cw+.8,FH);
+fx.fillStyle=sh>0?"rgba(255,255,255,"+(sh*.16).toFixed(3)+")":"rgba(0,0,0,"+(-sh*.32).toFixed(3)+")";fx.fillRect(X,fy+dy,cw+.8,FH)}
+return rise}
+var vis=true,done=false;
+new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(hero);
+function count(){var s=performance.now(),el=$("#n");(function f(){var k=Math.min(1,(performance.now()-s)/1600);el.textContent=Math.round(35*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})()}
+function intro(){hero.classList.add("show");count();if(!RM)salvo(6)}
+function loop(ms){var t=ms/1000;if(vis){drawSky(t);if(drawFlag(t)>=1&&!done){done=true;intro()}}drawFx();requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+hero.addEventListener("pointerdown",function(e){if(e.target.closest("button"))return;burst(e.clientX,e.clientY);wind+=.8});
+var lx=null;hero.addEventListener("pointermove",function(e){var m=lx==null?0:Math.abs(e.clientX-lx);lx=e.clientX;wind+=Math.min(.12,m/250);var n=performance.now();if(m>14&&n-lastG>1300){lastG=n;gust(false)}});
+hero.addEventListener("pointerup",function(){lx=null});hero.addEventListener("pointerleave",function(){lx=null});
+$("#bSal").onclick=function(){salvo(9)};$("#bWind").onclick=function(){wind=3;gust(true)};
+$("#bSnd").onclick=function(){snd=!snd;this.setAttribute("aria-pressed",snd);this.textContent=snd?"Ovoz: yoqilgan":"Ovoz: o‘chirilgan"};
+/* hisoblagich */
+function fmt(n){return n.toLocaleString("ru-RU")}
+function tick(){var s=Math.floor((Date.now()-new Date(1991,10,18))/1000);$("#kd").textContent=fmt(Math.floor(s/86400));$("#ks").textContent=fmt(Math.floor(s/3600));$("#kc").textContent=fmt(s)}
+tick();setInterval(tick,1000);
+var now=new Date(),nx=new Date(now.getFullYear(),10,18),td=now.getMonth()==10&&now.getDate()==18;if(!td&&nx<now)nx.setFullYear(now.getFullYear()+1);
+$("#ban").textContent=td?"Bugun Davlat bayrog‘i kuni! Bayramingiz muborak.":"Davlat bayrog‘i kuniga "+Math.ceil((nx-now)/864e5)+" kun qoldi. Mustaqillikning har soniyasi shu yerda sanalmoqda:";
+/* faktlar */
+var F=["Bayroq tomonlarining nisbati 1:2, ya’ni uzunligi eniga qaraganda ikki baravar katta.","Bayroqda sariq rang yo‘q: faqat moviy, oq, yashil va qizil ranglar bor.","Yulduzlar va yarim oy bayroqning yuqori chap qismidagi moviy maydonda joylashgan.","18-noyabr har yili Davlat bayrog‘i kuni sifatida eslanadi.","Bayroqdagi qizil chiziqlar ranglarni bir-biridan ajratib turadi.","Bayroq mustaqillikdan 79 kun keyin qabul qilindi."],fi=0;
+$("#fact").textContent=F[0];$("#nf").onclick=function(){fi=(fi+1)%F.length;$("#fact").textContent=F[fi]};
+/* viktorina */
+var Q=[["Bayroq qachon qabul qilingan?",["31-avgust 1991","18-noyabr 1991","2-iyul 1992","8-dekabr 1992"],1],["Bayroqda nechta yulduz bor?",["8","10","12","15"],2],["Oq rang nimani anglatadi?",["Tinchlik va poklik","Tog‘lar","Paxta","Oltin"],0],["Qaysi rang bayroqda yo‘q?",["Yashil","Qizil","Moviy","Sariq"],3],["Bayroq tomonlarining nisbati qanday?",["1:1","2:3","1:2","1:3"],2]];
+var qi=0,sc=0,box=$("#quiz");
+function render(){
+if(qi>=Q.length){var m=sc==Q.length?"Ajoyib! Siz bayroq bo‘yicha haqiqiy bilimdonsiz!":sc>=3?"Yaxshi natija! Yana urinib ko‘ring.":"Yuqoridagi ma’lumotlarni o‘qib, qayta urinib ko‘ring.";
+box.innerHTML="<h2>"+sc+" / "+Q.length+"</h2><p>"+m+"</p>";if(sc==Q.length)salvo(10);
+var r=document.createElement("button");r.className="btn";r.textContent="Qayta boshlash";r.onclick=function(){qi=0;sc=0;render()};box.appendChild(r);return}
+var q=Q[qi];box.innerHTML='<div class="bar"><i style="width:'+(qi/Q.length*100)+'%"></i></div><b>'+(qi+1)+'/'+Q.length+'. '+q[0]+'</b><div class="opts"></div>';
+var o=box.querySelector(".opts");
+q[1].forEach(function(t,i){var b=document.createElement("button");b.className="opt";b.textContent=t;b.onclick=function(){
+o.querySelectorAll("button").forEach(function(x,j){x.disabled=true;if(j==q[2])x.classList.add("ok")});
+if(i==q[2]){sc++;var r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2);burst(r.left+20,r.top)}else b.classList.add("bad");
+var nb=document.createElement("button");nb.className="btn";nb.textContent=qi==Q.length-1?"Natijani ko‘rish":"Keyingisi";nb.onclick=function(){qi++;render()};box.appendChild(nb);nb.focus({preventScroll:true});nb.scrollIntoView({block:"nearest",behavior:"smooth"})};o.appendChild(b)})}
+render();
+/* paydo bo‘lish */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".rv").forEach(function(s){io.observe(s)});
+</script>
+</body>
+</html>
